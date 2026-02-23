@@ -17,13 +17,13 @@ public class DLinkedListQueue<T> implements Queue<T> {
 
     @Override
     public T dequeue() throws Exception {
-        // TODO (dequeue from head using removeFirst())
+        if (isEmpty()) throw new Exception("Queue is empty");
         return list.removeFirst().getData();
     }
 
     @Override
     public T front() throws Exception {
-        // TODO (peek at head)
+        if (isEmpty()) throw new Exception("Queue is empty");
         return list.get(0).getData();
     }
 
